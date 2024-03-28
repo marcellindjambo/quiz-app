@@ -1,0 +1,63 @@
+[
+    {
+        "number": 1,
+        "question": "Quelle est la superficie du Gabon ?",
+        "option": ["267 667 km2", "256 745 km2", "2 567 000 km2", "1067 000 km2"],
+        "answer": "267 667 km2"
+    },
+    {
+        "number": 2,
+        "question": "En quelle année le Gabon a-t-il pris son indépendance ?",
+        "option": ["18 mars 1450", "17 août 1960", "5 juin 2006", "Tous ces réponses"],
+        "answer": "17 août 1960"
+    },
+    {
+        "number": 3,
+        "question": "Le gabon a combien de province ?",
+        "option": ["NEUF", "DOUZE", "TROIS", "DIX"],
+        "answer": "NEUF"
+    },
+    {
+        "number": 4,
+        "question": "Quelle est la capitale du Gabon ?",
+        "option": ["Libreville", "Mouila", "Tchibanga", "Porto Gentil"],
+        "answer": "Libreville"
+    },
+    {
+        "number": 5,
+        "question": "Comment appelle-t-on les habitants du Gabon ?",
+        "option": ["Les Gaboniens", "Les Gabiens", "Les Gabonais", "La Paz"],
+        "answer": "Les Gabonais "
+    },
+    {
+        "number": 6,
+        "question": "Quelle est la capitale économique du Gabon ?",
+        "option": ["Port-Gentil", "Libreville", "Bitam", "Franceville"],
+        "answer": "Port-Gentil"
+    },
+    {
+        "number": 7,
+        "question": "Comment s'appelait le 1er président du Gabon ?",
+        "option": ["Taylor Lautner", "Léon Mba", "Ali Bongo Ondimba", "Omar Bongo"],
+        "answer": "Léon Mba"
+    }
+    ,{
+        "number": 8,
+        "question": "Le Gabon a été colonisé par quel pays ?",
+        "option": ["France", "Allemagne", "Japon", "Europe"],
+        "answer": "France"
+    }
+    ,
+    {
+        "number": 9,
+        "question": "Au Gabon, il y'a combien d'ethnies?",
+        "option": ["20", "5", "40", "54"],
+        "answer": "54"
+    },
+    {
+        "number": 10,
+        "question": "Comment appelle-t-on les joueurs de l'équipe de football du Gabon ?",
+        "option": ["Les Panthères", "Les Éléphants", "Les Lions", "Les Aigles"],
+        "answer": "Les Panthères"
+    }
+]

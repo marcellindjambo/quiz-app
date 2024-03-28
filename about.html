@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="./styles/about.css">
+    <style>
+        /* Ajoute du style CSS inline pour une meilleure apparence */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .about-section {
+            text-align: center;
+            padding: 50px;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 0 -15px;
+        }
+
+        .column {
+            flex: 33.33%;
+            max-width: 33.33%;
+            padding: 0 15px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        h2 {
+            margin-top: 10px;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+<div class="about-section">
+    <h1>About Us</h1>
+    <p>Quiz App est une application de quiz interactif principalement en HTML, CSS et JavaScript.</p>
+    <p>Le thème du quiz porte sur l'histoire de la Tunisie.</p>
+</div>
+  
+<h2 style="text-align:center"></h2>
+<div class="row">
+    <div class="column">
+        <div class="card">
+            <div class="container">
+                <h2>Voir le profil Linkedin</h2>
+                <p class="title">Data Scientist & ML Engineer</p>
+                <p>
+                  <b>J'analyse et gère une grande quantité de données en utilisant des technologies spécialisées et je me concentre également sur la recherche, la construction et la conception de modèles prédictifs.</b>
+                </p>
+                <p><a class="button" href="https://www.linkedin.com/in/marcellindjambo" target="_blank">Voir le profil</a></p>
+            </div>
+        </div>
+    </div>
+  
+    <div class="column">
+        <div class="card">
+            <div class="container">
+                <h2>Accéder au compte rendu</h2>
+                <p>Vous avez la possibilité d'accéder au compte rendu de la création du site.</p>
+                <p><a class="button" href="./cours1-Introduction.pdf" download="cours1-Introduction.pdf">Télécharger le PDF</a></p>
+            </div>
+        </div>
+    </div>
+  
+</div>
+
+</body>
+</html>
