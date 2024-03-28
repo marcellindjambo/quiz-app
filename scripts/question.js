@@ -181,7 +181,7 @@ function startTimer(duration, callback) {
         timerEl.textContent = timer;
 
         // Vérifier si le temps est écoulé
-        if (--timer < 0) {
+        if (--timer == 0) {
             clearInterval(countdown);
             // Appeler la fonction de rappel lorsque le temps est écoulé
             callback();
