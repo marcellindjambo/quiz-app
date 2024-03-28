@@ -1,6 +1,6 @@
 
 const xhr = new XMLHttpRequest();
-xhr.open("GET", "/quiz-app/questions/question.json", true);
+xhr.open("GET", "/questions/question.json", true);
 
 /**
  * Sends a GET request to fetch the question data from the question.json file.
