@@ -133,9 +133,12 @@ goHomeBtn.onclick = () => {
 }
 
 previewBtn.onclick = () => {
+    // Arrêter la minuterie avant de passer à la question précédente
+    clearInterval(countdown);
+
     if (questionCount > 0) {
         const previousQuestion = questions[questionCount - 1];
-        const previousAnswerIndex = previousQuestion.option.indexOf(previousQuestion.answer);
+        const previousAnswerIndex = previousQuestion.options.indexOf(previousQuestion.answer);
         const selectedOption = optionList.querySelector(".correct");
         const selectedOptionIndex = Array.from(optionList.children).indexOf(selectedOption);
 
@@ -150,6 +153,7 @@ previewBtn.onclick = () => {
         headerScore(); // Mettre à jour le score affiché
     }
 };
+
 
 function showQuestion(index) {
     const questionText = document.querySelector(".question-text");
