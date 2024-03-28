@@ -134,7 +134,7 @@ goHomeBtn.onclick = () => {
 
 previewBtn.onclick = () => {
     // Arrêter la minuterie avant de passer à la question précédente
-    clearInterval(countdown);
+    //clearInterval(countdown);
 
     if (questionCount > 0) {
         const previousQuestion = questions[questionCount - 1];
