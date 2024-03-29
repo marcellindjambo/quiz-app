@@ -5,6 +5,7 @@ xhr.open("GET", "https://raw.githubusercontent.com/marcellindjambo/quiz-app/main
  * Sends a GET request to fetch the question data from the question.json file.
  * Once the data is received, it is parsed and stored in the 'questions' variable.
  */
+// Initialize the 'questions' variable
 xhr.onload = function () {
   // Check if the request was successful (status code 200)
   if (xhr.status === 200) {
