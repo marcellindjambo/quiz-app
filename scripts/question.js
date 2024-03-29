@@ -1,5 +1,5 @@
 const xhr = new XMLHttpRequest();
-xhr.open("GET", "../data/quiz.json", true);
+xhr.open("GET", "https://raw.githubusercontent.com/marcellindjambo/quiz-app/main/data/quiz.json", true);
 
 /**
  * Sends a GET request to fetch the question data from the question.json file.
