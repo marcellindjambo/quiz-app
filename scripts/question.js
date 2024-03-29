@@ -1,5 +1,5 @@
 const xhr = new XMLHttpRequest();
-xhr.open("GET", "./question.json", true);
+xhr.open("GET", "../data/question.json", true);
 
 /**
  * Sends a GET request to fetch the question data from the question.json file.
