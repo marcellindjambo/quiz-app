@@ -1,6 +1,5 @@
-
 const xhr = new XMLHttpRequest();
-xhr.open("GET", "./questions/question.json", true);
+xhr.open("GET", "/questions/question.json", true);
 
 /**
  * Sends a GET request to fetch the question data from the question.json file.
@@ -23,7 +22,9 @@ xhr.send();
 
 let timerEl = document.querySelector(".timer");
 let countdown;
-const questionTime = 30; // Temps en secondes pour chaque question
+let timer = 0; // Initialisation du temps à 0 secondes
+const questionTime = 0; // Début du quiz
+const timeText = document.querySelector(".time-text");
 
 
 const startBtn = document.querySelector(".start-btn");
@@ -54,7 +55,9 @@ startBtn.onclick = () => {
     
     // Add the 'active' class to the 'main' element to show the main content
     main.classList.add("active");
-    
+
+    // Start the timer when the quiz starts
+    startTimer();
 }
 
 exitBtn.onclick = () => {
@@ -108,13 +111,27 @@ nextBtn.onclick = () => {
     }
 };
 
+
+previewBtn.onclick = () => {
+    if (questionCount > 0) {
+        questionCount--; // Décrémente le compteur de questions
+        questionNumb--; // Décrémente le numéro de la question
+        showQuestion(questionCount); // Affiche la question précédente
+        questionCounter(questionNumb); // Met à jour le compteur de question affiché
+        headerScore(); // Met à jour le score affiché
+
+        // Ajoutez ici toute autre logique nécessaire, par exemple, pour désactiver le bouton de prévisualisation s'il n'y a plus de questions précédentes à afficher
+    }
+};
+
 tryAgainBtn.onclick = () => {
     quizBox.classList.add('active');
     nextBtn.classList.remove('active');
     resultBox.classList.remove('active');
     questionCount = 0;
     questionNumb = 1;
-    userScore = 0;
+    userScore = 0 ;
+    timer = 0;
     showQuestion(questionCount);
     questionCounter(questionNumb);
     headerScore();
@@ -128,17 +145,15 @@ goHomeBtn.onclick = () => {
     questionCount = 0;
     questionNumb = 1;
     userScore = 0;
+    timer = 0;
     showQuestion(questionCount);
     questionCounter(questionNumb);
 }
 
 previewBtn.onclick = () => {
-    // Arrêter la minuterie avant de passer à la question précédente
-    //clearInterval(countdown);
-
-    if (questionCount > 0) {
+    if ((questionCount > 0) && (userScore!==0)) {
         const previousQuestion = questions[questionCount - 1];
-        const previousAnswerIndex = previousQuestion.options.indexOf(previousQuestion.answer);
+        const previousAnswerIndex = previousQuestion.option.indexOf(previousQuestion.answer);
         const selectedOption = optionList.querySelector(".correct");
         const selectedOptionIndex = Array.from(optionList.children).indexOf(selectedOption);
 
@@ -150,10 +165,9 @@ previewBtn.onclick = () => {
         showQuestion(questionCount);
         questionNumb--;
         questionCounter(questionNumb);
-        headerScore(); // Mettre à jour le score affiché
+        headerScore();// Mettre à jour le score affiché
     }
 };
-
 
 function showQuestion(index) {
     const questionText = document.querySelector(".question-text");
@@ -170,28 +184,29 @@ function showQuestion(index) {
     }
 
     // Configuration de la minuterie pour cette question
-    startTimer(questionTime);
+    startTimer();
 }
 
+/*------------ Fonction pour la minuterie --------------------------*/
+function startTimer() {
+    if (!timerEl) {
+        console.error("Element timerEl is not defined");
+        return;
+    }
 
-function startTimer(duration, callback) {
-    let timer = duration;
-    countdown = setInterval(function () {
-        // Mettre à jour l'affichage du timer
-        timerEl.textContent = timer;
-
-        // Vérifier si le temps est écoulé
-        if (--timer == 0) {
+    countdown = setInterval(() => {
+        try {
+            timerEl.textContent = String(timer++);
+        } catch (error) {
+            console.error(`Failed to update timer: ${error}`);
             clearInterval(countdown);
-            // Appeler la fonction de rappel lorsque le temps est écoulé
-            callback();
         }
-        // Mettre à jour le timer toutes les secondes
-    }, 1000); 
+    }, 1000);
 }
 
 
 
+/*------------ Fonction pour la sélection de l'option --------------------------*/
 function optionSelected(answer) {
     let userAnswer = answer.textContent.trim();
     let correctAnswer = questions[questionCount].answer.trim();
@@ -231,7 +246,7 @@ function optionSelected(answer) {
 
 }
 
-// Fonction pour sélectionner automatiquement la bonne réponse et passer à la question suivante
+/*------------ Fonction pour le bouton suivant --------------------------*/
 function timeUp() {
     // Marquer la réponse correcte
     const correctAnswerIndex = questions[questionCount].option.indexOf(questions[questionCount].answer);
@@ -243,18 +258,17 @@ function timeUp() {
         optionList.children[i].classList.add("disabled");
     }
 
-    // Activer le bouton suivant
-    nextBtn.click(); // Simuler un clic sur le bouton suivant pour passer à la question suivante
 }
 
 
-
+/*------------ Fonction pour le compteur de questions --------------------------*/
 function questionCounter(index) {
     const questionTotal = document.querySelector(".question-total");
     questionTotal.textContent = `${index} of ${questions.length} Questions`;
 }
 
 
+/*------------ Fonction pour l'affichage du score --------------------------*/
 function headerScore() {
     const headerScoreText = document.querySelector(".header-score");
     headerScoreText.classList.add("active");
@@ -262,12 +276,14 @@ function headerScore() {
     
 }
 
+/*------------ Fonction pour le bouton suivant --------------------------*/
 function showResultBox() {
     const scoreText = document.querySelector(".score-text");
     const circularProgress = document.querySelector(".circular-progress");
     const progressValue = document.querySelector(".progress-value");
 
-    scoreText.textContent = `Your Score : ${userScore} / ${questions.length}`;
+    scoreText.textContent = `Votre score : ${userScore} / ${questions.length}`;
+    timeText.textContent = `Temps : ${timer} s`; // Affiche le temps écoulé
     quizBox.classList.remove("active");
     resultBox.classList.add("active");
 
@@ -289,4 +305,3 @@ function showResultBox() {
 
     const progressInterval = setInterval(updateProgress, speed);
 }
-

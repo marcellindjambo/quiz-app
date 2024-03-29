@@ -1,63 +1,67 @@
 [
     {
         "number": 1,
-        "question": "Quelle est la superficie du Gabon ?",
-        "option": ["267 667 km2", "256 745 km2", "2 567 000 km2", "1067 000 km2"],
-        "answer": "267 667 km2"
+        "question": "Les données d'une taille de ____ octets sont appelées Big Data.",
+        "option": ["Giga", "Meta", "Peta", "Tera"],
+        "answer": "Peta"
     },
     {
         "number": 2,
-        "question": "En quelle année le Gabon a-t-il pris son indépendance ?",
-        "option": ["18 mars 1450", "17 août 1960", "5 juin 2006", "Tous ces réponses"],
-        "answer": "17 août 1960"
+        "question": "________ est une collection de données dont le volume est énorme, mais qui croît de manière exponentielle avec le temps.",
+        "option": [" Fichier", " Base de données", "Cloud", "Big Data"],
+        "answer": "Big Data"
     },
     {
         "number": 3,
-        "question": "Le gabon a combien de province ?",
-        "option": ["NEUF", "DOUZE", "TROIS", "DIX"],
-        "answer": "NEUF"
+        "question": " Il existe _______ types de données Big Data.?",
+        "option": ["7", "3", "6", "1"],
+        "answer": "3"
     },
     {
         "number": 4,
-        "question": "Quelle est la capitale du Gabon ?",
-        "option": ["Libreville", "Mouila", "Tchibanga", "Porto Gentil"],
-        "answer": "Libreville"
+        "question": "Quelle société a développé Apache Kafka ?",
+        "option": ["LinkedIn", "Amazon", "Microsoft", "Google"],
+        "answer": "LinkedIn"
     },
     {
         "number": 5,
-        "question": "Comment appelle-t-on les habitants du Gabon ?",
-        "option": ["Les Gaboniens", "Les Gabiens", "Les Gabonais", "La Paz"],
-        "answer": "Les Gabonais "
+        "question": "En informatique, ____ est une représentation symbolique des faits ou de concepts à partir desquels des informations peuvent être obtenues avec un degré raisonnable de confiance.",
+        "option": ["Connaissance", "Données", "Programme", "Algorithme"],
+        "answer": "Données"
     },
     {
         "number": 6,
-        "question": "Quelle est la capitale économique du Gabon ?",
-        "option": ["Port-Gentil", "Libreville", "Bitam", "Franceville"],
-        "answer": "Port-Gentil"
+        "question": "Dans les environnements Big Data, la vélocité désigne ___________",
+        "option": [
+            "Les données peuvent arriver à grande vitesse", 
+            "Des ensembles de données énormes peuvent s'accumuler dans des périodes très courtes.",
+            " La vélocité des données se traduit par le temps qu'il faut pour que les données soient traitées.", 
+            " Toutes les réponses ci-dessus"],
+        "answer": "Toutes les réponses ci-dessus"
     },
     {
         "number": 7,
-        "question": "Comment s'appelait le 1er président du Gabon ?",
-        "option": ["Taylor Lautner", "Léon Mba", "Ali Bongo Ondimba", "Omar Bongo"],
-        "answer": "Léon Mba"
+        "question": "Lesquels des éléments suivants sont des avantages du traitement des Big Data ?",
+        "option": ["Réduction des coûts", " Réduction du temps", "Décisions commerciales plus intelligentes", "Tous les avantages mentionnés ci-dessus"],
+        "answer": "Tous les avantages mentionnés ci-dessus"
     }
     ,{
         "number": 8,
-        "question": "Le Gabon a été colonisé par quel pays ?",
-        "option": ["France", "Allemagne", "Japon", "Europe"],
-        "answer": "France"
+        "question": " Les données qui ne sont pas conformes à un modèle de données ou à un schéma de données sont connues sous le nom de ______.",
+        "option": ["Données structurées", "Données non structurées", "Données semi-structurées", "Tout ce qui est mentionné ci-dessus"],
+        "answer": " Données non structurées"
     }
     ,
     {
         "number": 9,
-        "question": "Au Gabon, il y'a combien d'ethnies?",
-        "option": ["20", "5", "40", "54"],
-        "answer": "54"
+        "question": " ______ implique l'exécution simultanée de plusieurs sous-tâches qui, ensemble, constituent une tâche plus importante",
+        "option": ["Traitement parallèle des données", "Traitement simple", " Traitement de données multiples", "Aucun des éléments mentionnés ci-dessus"],
+        "answer": "Traitement parallèle des données"
     },
     {
         "number": 10,
-        "question": "Comment appelle-t-on les joueurs de l'équipe de football du Gabon ?",
-        "option": ["Les Panthères", "Les Éléphants", "Les Lions", "Les Aigles"],
-        "answer": "Les Panthères"
+        "question": "Parmi les éléments suivants, lesquels constituent un exemple de données non structurées:",
+        "option": ["A. Numéro de matricule du voiture, marque, modèle", "B. Vidéos", "C. Fichiers audio", "Les deux B et C"],
+        "answer": "Les deux B et C"
     }
 ]

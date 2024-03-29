@@ -1,75 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> quiz interactif </title>
+    <!-- Scripts -->
     <script src="./scripts/question.js" defer ></script>
-    
-    <link rel="stylesheet" href="./styles/about.css">
+
+    <!-- Styles -->
     <link rel="stylesheet" href="./styles/style.css">
+
+    <!--logo -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/QuizWiz.ico">
 </head>
 <body>
     <main class="main">
 
         <!-- Header -->
         <header class="header">
-            <a href="index.html" class="logo">Quiz app.</a>
+            <a href="index.html" class="logo">
+                <img src="assets/QuizWiz.png" alt="QuizWiz Logo">
+            </a>
             <nav class="navbar">
-                <a href="#" class="active">Home</a>
-                <a href="./about.html">About</a>
+                <a href="#" class="active">Accueil</a>
             </nav>
         </header>
 
         <div class="container">
-            <!--Section qui contient les questions-->
+            <!-- Section qui contient les questions -->
             <section class="quiz-section">
                 <div class="quiz-box">
                     <h1>Quiz Le Gabon</h1>
+                    <hr>
                     <div class="quiz-header">
                         <div class="timer">
-                            <p>Time: <span id="timer"> 0</span> </p>
+                            <p>
+                                <span id="timer">0</span>
+                            </p>
                         </div>
                         <span class="header-score"></span>
                     </div>
 
                     <h2 class="question-text"></h2>
                     <div class="option-list"></div>
-
+                    <hr>
                     <div class="qui-footer">
                         <button class="preview-btn">Precedent</button>
-                        <span class="question-total">1 of 5 Questions</span>
-                        <button class="next-btn">Next</button>
+                        <span class="question-total">1 Sur 5 Questions</span>
+                        <button class="next-btn">Suivant</button>
                     </div>
 
                 </div>
 
+                <!-- Resultat du quiz -->
                 <div class="result-box">
-                    <h2>Quiz Result</h2>
+                    <h2>Resultats du Quiz </h2>
                     <div class="percentage-container">
                         <div class="circular-progress">
                             <span class="progress-value"></span>
                         </div>
 
-                        <span class="score-text">Your Score is : </span>
+                        <span class="score-text"></span>
+                        <br>
+                        <span class="time-text"></span>
                     </div>
 
                     <div class="buttons">
-                        <button class="tryAgain-btn">Try Again</button>
-                        <button class="goHome-btn">Go to Home</button>
+                        <button class="tryAgain-btn">Rejouer</button>
+                        <button class="goHome-btn">Allez à l'accueil</button>
                     </div>
                 </div>
 
             </section>
-            <!---Section Home-->
+            <!-- Section Home -->
             <section class="home">
                 <div class="home-content">
-                    <h1>Quiz Le Gabon</h1>
+                    <h1>Tester vos connaissances <br> sur le Big Data</h1>
                     <hr>
                     <p>
-                        <b>Bienvenue sur notre site de quiz interactif.</b><br>
-                        Ce quiz consiste à apprendre plusieurs choses sur le Gabon.<br>
-                        Appuyer sur "Commencer le Quiz" pour commencer
+                        <b>Bienvenue le QuizWiz</b><br>
+                        Lancez-vous dans le vif du sujet en appuyant sur <br> 
+                               <b style="color: #70D2B1;">"Commencer le Quiz"</b>
                     </p>
                     <button class="start-btn">Commencer le Quiz</button>
                 </div>
@@ -78,14 +89,18 @@
 
     </main>
 
+    <!-- Popup d'information -->
     <div class="popup-info">
         <h2>Quiz Guide</h2>
         <span class="info">1. Le quiz est composé de 10 questions.</span>
-        <span class="info">2. Chaque question comporte 4 options de réponse, parmi lesquelles une seule est correcte.</span>
-        <span class="info">3. Vous disposez de 30 secondes pour répondre à chaque question.</span>
-        <span class="info">4. Chaque réponse correcte vaut 1 point, tandis qu'une réponse incorrecte vaut 0 point.</span>
+        <span class="info">2. Chaque question comporte 4 options , parmi lesquelles une seule est correcte.</span>
+        <span class="info">3. Le temps écoulé pour compléter le quiz est sera affiché à la fin.</span>
+        <span class="info">4. Une réponse correcte vaut &nbsp; <b> 1 point </b>, tandis qu'une réponse incorrecte vaut &nbsp;<b>0 point</b> </span>
         <span class="info">5. Le score maximal est de 10 points.</span>
-        <span class="info">6. En appuyant sur "Continuer", vous lancez le quiz et le compte à rebours démarre.</span>
+        <span class="info">6. Vous avec la possibilite de revenir sur la question precedente.</span>
+        <span class="info">7. En appuyant sur "Continuer", vous lancez le quiz et le temps commence.</span><br>
+
+        <span class="info"><i>Bonne chance !</i></span>
 
         <div class="btn-group">
             <button class="info-btn exit-btn">Quitter </button>
@@ -93,6 +108,5 @@
         </div>
     </div>
 
-    
 </body>
 </html>
