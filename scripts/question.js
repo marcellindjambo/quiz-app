@@ -46,10 +46,8 @@ const nextBtn = document.querySelector(".next-btn");
 const previewBtn = document.querySelector(".preview-btn");
 const optionList = document.querySelector(".option-list");
 
-/**
- * Event handler function for the 'onclick' event of the 'startBtn' element.
- * It adds the 'active' class to the 'popupInfo' and 'main' elements.
- */
+
+
 startBtn.onclick = () => {
     // Add the 'active' class to the 'popupInfo' element to show the popup
     popupInfo.classList.add("active");
@@ -121,9 +119,9 @@ previewBtn.onclick = () => {
         questionCounter(questionNumb); // Met à jour le compteur de question affiché
         headerScore(); // Met à jour le score affiché
 
-        // Ajoutez ici toute autre logique nécessaire, par exemple, pour désactiver le bouton de prévisualisation s'il n'y a plus de questions précédentes à afficher
     }
 };
+
 
 tryAgainBtn.onclick = () => {
     quizBox.classList.add('active');
